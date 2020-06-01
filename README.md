@@ -1,4 +1,4 @@
-# project-3
+# Resource Center
 
 <h2> <a href="https://pure-sierra-79921.herokuapp.com/">A resource center for developers</a></h2>
 <p>The Resource Center was built as a place to gather helpful links and information for developers.
