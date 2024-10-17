@@ -1,0 +1,240 @@
+<!-- DISCLAIMER
+ 
+Project:  Project 3
+Name: Ben Linton
+Submitted: 10/16/24
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+ 
+Reflection:  They changed Bootstrap 5 too much for my liking... Time to go back to Tailwind... Again...
+Back to the plow I call Node.js...  
+ 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>The World of Horror</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" href="favicon.png">
+</head>
+
+<body>
+  <header class="border-bottom">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <img class="navbar-brand" src="images/logo.png" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link btn" id="home-nav">Home</a>
+            <a class="nav-link btn" id="trivia-nav">Trivia</a>
+            <a class="nav-link btn" id="films-nav">Films</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="hero parallax">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="display-1">Step into the Shadows of Horror Cinema's Greatest Icons</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="home">
+    <div class="container mt-4 pt-4">
+      <div class="row">
+        <div class="col">
+          <p>From the iconic hockey mask of Jason Voorhees to the razor-sharp glove of Freddy Krueger, horror cinema has
+            given us some of the most memorable villains in film history. These characters have become cultural
+            touchstones, inspiring countless sequels, spin-offs, and merchandise. But what is it about these monsters
+            that keeps us coming back for more? Is it the thrill of the chase, the suspense of the kill, or the
+            cathartic release of seeing evil defeated? Join us as we explore the dark side of cinema and uncover the
+            secrets behind these legendary characters.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-4 pt-4">
+      <div class="row">
+        <div class="slider">
+          <figure><img class="slide-img" src="images/Chucky.jpg" alt="Chucky" />
+            <figcaption>Chucky</figcaption>
+          </figure>
+          <figure><img class="slide-img" src="images/Freddy_Krueger.jpg" alt="Freddy Krueger" />
+            <figcaption>Freddy Krueger</figcaption>
+          </figure>
+          <figure><img class="slide-img" src="images/Ghostface.jpg" alt="Ghostface" />
+            <figcaption>Ghostface</figcaption>
+          </figure>
+          <figure><img class="slide-img" src="images/Jason_Voorhees.jpg" alt="Jason Voorhees" />
+            <figcaption>Jason Voorhees</figcaption>
+          </figure>
+          <figure><img class="slide-img" src="images/Michael_Myers.png" alt="Michael Myers" />
+            <figcaption>Michael Myers</figcaption>
+          </figure>
+          <figure><img class="slide-img" src="images/pinhead.png" alt="Pinhead" />
+            <figcaption>Pinhead</figcaption>
+          </figure>
+          <figure><img class="slide-img" src="images/Leatherface.jpg" alt="Leatherface" />
+            <figcaption>Leatherface</figcaption>
+          </figure>
+          <figure><img class="slide-img" src="images/Sadako.png" alt="Sadako" />
+            <figcaption>Sadako</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-4 pt-4 mb-4 pb-4">
+      <div class="row">
+        <iframe width="620" height="620" src="https://www.youtube.com/embed/-SqAqgjwLEk"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="trivia" class="trivia-container">
+    <h1 class="text-center trivia-header">Trivia Game</h1>
+    <br>
+    <button class="btn btn-lg start-button" type="button">Start</button>
+    <div class="trivia-card">
+      <div class="timer"></div>
+      <div class="question"></div>
+      <div class="answers"></div>
+  </section>
+  <h2 id="film-title" class="text-center card-header mt-4 pt-4">Featured Films</h2>
+  <section id="film-cards">
+    <div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <img class="card-img" src="images/Halloween.jpg" alt="Halloween poster" />
+              <h5 class="card-title mt-3">Halloween (1978)</h5>
+              <p class="card-text flex-grow-1">In Halloween (1978), masked killer Michael Myers escapes from a mental
+                institution and returns to his hometown to stalk teenager Laurie Strode on Halloween night. With
+                chilling
+                suspense and a haunting score, this John Carpenter classic defined the slasher genre and introduced one
+                of
+                horror’s most iconic villains.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <img class="card-img" src="images/A_Nightmare_on_Elm_Street.jpg" alt="A Nightmare on Elm Street poster" />
+              <h5 class="card-title mt-3">A Nightmare on Elm Street (1984)</h5>
+              <p class="card-text flex-grow-1">In A Nightmare on Elm Street (1984), a group of teenagers is terrorized
+                in
+                their dreams by the sadistic killer Freddy Krueger. As the lines between dreams and reality blur, they
+                must stay awake to survive. Wes Craven’s iconic horror film introduced a terrifying new villain and
+                forever changed the slash Genre.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <img class="card-img" src="images/Friday_the_13th.jpg" alt="Friday the 13th poster" />
+              <h5 class="card-title mt-3">Friday the 13th (1980)</h5>
+              <p class="card-text flex-grow-1">In Friday the 13th (1980), a group of camp counselors is brutally
+                murdered
+                one by one at Camp Crystal Lake, a site with a dark past. As the killer closes in, the counselors
+                uncover
+                the chilling truth behind the camp's deadly history. This classic slasher film laid the groundwork for
+                the
+                legend of Jason Voorhees.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <img class="card-img" src="images/Saw.jpg" alt="Saw poster" />
+              <h5 class="card-title mt-3">Saw (2004)</h5>
+              <p class="card-text flex-grow-1">In Saw (2004), two men, Dr. Lawrence Gordon and Adam, wake up chained in
+                a
+                grimy bathroom with no memory of how they got there. They soon discover they are part of a deadly game
+                orchestrated by a sadistic figure known as Jigsaw, who forces his victims to make horrific choices to
+                survive. As time runs out, they must piece together clues about their captor and their own connection to
+                the twisted game. Known for its shocking twists and inventive traps, Saw became a hallmark of
+                psychological horror and launched a successful franchise.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <img class="card-img" src="images/Scream.jpg" alt="Scream poster" />
+              <h5 class="card-title mt-3">Scream (1996)</h5>
+              <p class="card-text flex-grow-1">Scream (1996) follows high school student Sidney Prescott, whose small
+                town
+                is terrorized by a masked killer known as Ghostface. As the body count rises, Sidney and her friends
+                must
+                unravel the mystery of the killer’s identity, while Ghostface plays on their knowledge of horror movie
+                tropes to toy with them. Directed by Wes Craven, Scream revitalized the slasher genre with its blend of
+                self-awareness, dark humor, and shocking twists, making it a modern horror classic.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <img class="card-img" src="images/Alien.jpg" alt="Alien poster" />
+              <h5 class="card-title mt-3">Alien (1979)</h5>
+              <p class="card-text flex-grow-1">Alien (1979) is a sci-fi horror classic that follows the crew of the
+                spaceship Nostromo as they investigate a distress signal on a remote planet. They unknowingly bring a
+                deadly extraterrestrial organism on board, which soon begins stalking and killing them one by one. As
+                the
+                crew fights for survival, warrant officer Ripley (Sigourney Weaver) emerges as the last hope against the
+                relentless alien. Known for its intense atmosphere, groundbreaking effects, and iconic creature
+                design, Alien set the standard for sci-fi horror and introduced one of the most iconic monsters in film
+                history.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4">
+    <div class="container text-center">
+      <small>© 2024 Company, Inc</small>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
