@@ -32,7 +32,7 @@ Back to the plow I call Node.js...
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
   <link rel="icon" href="favicon.png">
 </head>
 
@@ -57,7 +57,7 @@ Back to the plow I call Node.js...
   </header>
   <section class="hero parallax">
     <div class="container">
-      <div class="row">
+      <div class="row header-row">
         <div class="col-lg-6">
           <h1 class="display-1">Step into the Shadows of Horror Cinema's Greatest Icons</h1>
         </div>
@@ -65,10 +65,11 @@ Back to the plow I call Node.js...
     </div>
   </section>
   <section id="home">
+    <button id="toggle-stylesheet" onclick="toggleStylesheet()" class="btn btn-lg" type="button">Toggle Polychrome</button>
     <div class="container mt-4 pt-4">
       <div class="row">
         <div class="col">
-          <p>From the iconic hockey mask of Jason Voorhees to the razor-sharp glove of Freddy Krueger, horror cinema has
+          <p class="home-text">From the iconic hockey mask of Jason Voorhees to the razor-sharp glove of Freddy Krueger, horror cinema has
             given us some of the most memorable villains in film history. These characters have become cultural
             touchstones, inspiring countless sequels, spin-offs, and merchandise. But what is it about these monsters
             that keeps us coming back for more? Is it the thrill of the chase, the suspense of the kill, or the

@@ -154,3 +154,19 @@ var triviaGame = {
         $('.answers').append($('<button>').text('Start Over').addClass('btn').click(this.startGame.bind(this)));
     }
 };
+
+function toggleStylesheet() {
+    const stylesheetId = 'polychrome-stylesheet';
+    const stylesheet = document.getElementById(stylesheetId);
+
+    if (stylesheet) {
+        stylesheet.parentNode.removeChild(stylesheet);
+    } else {
+        const link = document.createElement('link');
+        link.id = stylesheetId;
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/css/polychrome.css';
+        document.head.appendChild(link);
+    }
+}

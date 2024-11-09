@@ -1,3 +1,6 @@
+/* Organized and documented CSS file for the Film Trivia Website */
+
+/* Global Styles */
 body {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
@@ -5,20 +8,28 @@ body {
     font-style: normal;
 }
 
+.container-fluid {
+    flex-direction: row;
+}
+
+/*Trivia Section*/
 #trivia {
     display: none;
 }
 
+/*Film Cards Section*/
 #film-cards {
     display: none;
 }
 
+/*Film Title*/
 #film-title {
     display: none;
     justify-content: center;
     align-items: center;
 }
 
+/*Trivia Container*/
 .trivia-container {
     display: flex;
     flex-direction: column;
@@ -28,6 +39,7 @@ body {
     background-color: #f5f5f5;
 }
 
+/*Film Cards Container*/
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -37,14 +49,16 @@ body {
     height: 50vh;
 }
 
+/*Start Button*/
 .start-button {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Paralax Effect */
 .parallax {
-    background-image: url('images/hero_image.jpg');
+    background-image: url('../images/hero_image.jpg');
     min-height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -52,10 +66,18 @@ body {
     background-size: cover;
 }
 
+
+/* Header */
 .display-1 {
     color: white;
+    text-align: left;
 }
 
+.header-row {
+    justify-content: flex-start;
+}
+
+/* Slide Image */
 .slide-img {
     display: inline-block;
     width: 250px;
@@ -64,6 +86,7 @@ body {
     background: transparent;
 }
 
+/* Card Styles */
 .card {
     flex: 1;
     margin: 10px;
@@ -97,12 +120,14 @@ body {
     margin: 10px 0;
 }
 
+/* Navbar */
 .navbar-brand {
     width: 64px;
     height: 64px;
     object-fit: contain;
 }
 
+/* Footer */
 footer {
     border-top: 2px solid #f5f5f5;
     background-color: black;
