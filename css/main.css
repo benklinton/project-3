@@ -17,6 +17,14 @@ body {
     display: none;
 }
 
+#form {
+    display: none;
+}
+
+#form-confirmation {
+    display: none;
+}
+
 /*Film Cards Section*/
 #film-cards {
     display: none;
